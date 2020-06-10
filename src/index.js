@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import QuantityMeasurement from './components/quantityMeasurement';
+import '../src/services/quantityMeasurement.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <QuantityMeasurement />
   </React.StrictMode>,
   document.getElementById('root')
 );
