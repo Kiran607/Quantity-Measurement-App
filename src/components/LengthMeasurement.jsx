@@ -1,26 +1,26 @@
 import React from 'react';
 import {
     Card, CardImg, CardText, CardBody, Button
-  } from 'reactstrap';
-  import scale from '../assests/scale.png'
+} from 'reactstrap';
+import scale from '../assests/scale.png'
 
 class LengthMeasurement extends React.Component {
-    constructor(){
+    constructor() {
         super();
     }
     render() {
         return (
             <div className="card">
-            <Card>
-              <CardImg src={scale} alt="Card image cap" />
-              <CardBody>
-                <CardText>Length</CardText>
-                {/* <Button>Button</Button> */}
-              </CardBody>
-            </Card>
-          </div>
-
+                <Card>
+                    <Button className="buttonLength">
+                        <CardImg src={scale} alt="Card image cap" className="lengthCard" />
+                        <CardBody>
+                            <CardText>Length</CardText>
+                        </CardBody>
+                    </Button>
+                </Card>
+            </div>
         );
     }
 }
-export default LengthMeasurement ;
+export default LengthMeasurement;
