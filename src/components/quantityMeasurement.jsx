@@ -6,7 +6,11 @@ import VolumeMeasurement from './VolumeMeasurement';
 import { Container, Row, Col } from 'reactstrap';
 
 class QuantityMeasurement extends React.Component {
+    state={
+        converters:["Meteres","Kilometere","Centimeteres","Millimetere","Micrometere","Mile","Foot","Inch"],
+    };
     render() {
+        const {converters}=this.state;
         return (
             <div className="quantityForm">
                 <div className="header">
@@ -33,30 +37,20 @@ class QuantityMeasurement extends React.Component {
                     </Row>
                 </Container>
                 <div className="converterBody">
-                    <h4 className="converter-title">From To</h4>
-                    <input type="text" value="1" id="input"/>
+                    <h4 className="converter-title">FROM TO</h4>
+                    <input type="text" id="input"/>
                     <span> </span>
-                    <input type="text" value="100" id="result"/><br/>
+                    <input type="text" id="result"/><br/>
                     <select id="inputType">
-                        <option value="meter">Meteres</option>
-                        <option value="kilometer">Kilometere</option>
-                        <option value="centimeters">Centimeteres</option>
-                        <option value="millimeter">Millimetere</option>
-                        <option value="micrometer">Micrometere</option>
-                        <option value="mile">Mile</option>
-                        <option value="foot">Foot</option>
-                        <option value="inch">Inch</option>
+                        {converters.map(convert=>
+                            <option key={convert} value={convert}> {convert} </option>
+                        )}                       
                     </select>
                     <span> </span>
                     <select id="resultType">
-                        <option value="meter">Meteres</option>
-                        <option value="kilometer">Kilometere</option>
-                        <option value="centimeters">Centimeteres</option>
-                        <option value="millimeter">Millimetere</option>
-                        <option value="micrometer">Micrometere</option>
-                        <option value="mile">Mile</option>
-                        <option value="foot">Foot</option>
-                        <option value="inch">Inch</option>
+                    {converters.map(convert=>
+                            <option key={convert} value={convert}> {convert} </option>
+                        )}
                     </select>
                 </div>
             </div>
