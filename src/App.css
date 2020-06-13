@@ -63,6 +63,7 @@
   width: 83%;
   font-size: 19px;
   text-align: center;
+  font-weight: 500;
   }
   .temperature{
   top: 224px;
@@ -92,24 +93,35 @@
   left: 385px;
   width: 200px;
   height: 180px;
-  background: #EDFDF9 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
-  border: 1px solid #0EC098;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 7px;
   opacity: 1;
+  cursor: pointer;
   }
+
+  .card:hover{
+    background: #EDFDF9 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #0EC098;
+    border-radius: 7px;
+    opacity: 1;
+  }
+
+
 
   .buttonLength{
   top: 224px;
   left: 385px;
   width: 200px;
   height: 180px;
+  cursor: pointer;
   }
 
   p{
     text-align: center;
     font-size: 15px;
     font-family: sans-serif;
+    font-weight: bold;
   }
 
   .lengthCard{
@@ -126,12 +138,17 @@
   left: 588px;
   width: 200px;
   height: 180px;
-  background: #FFEEF0 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
-  border: 1px solid #FD5160;
+  background: white 0% 0% no-repeat padding-box;
   border-radius: 7px;
   opacity: 1;
   margin-left: 30px;
+  }
+
+  .temperatureCard:hover{
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #FD5160;
+    border-radius: 7px;
+    opacity: 1;
   }
 
   .temperatureButton{
@@ -139,6 +156,7 @@
     left: 588px;
     width: 200px;
     height: 180px;
+    cursor: pointer;
   }
 
   .hotCardImg{
@@ -157,10 +175,14 @@
   height: 180px;
   background: #E8DDFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
-  border: 1px solid #7224FF;
   border-radius: 7px;
   opacity: 1;
   margin-left: 30px;
+  cursor: pointer;
+  }
+
+  .volumeCard:hover{
+    border: 1px solid #7224FF;
   }
 
   .volumeButton{
@@ -168,6 +190,7 @@
     left: 791px;
     width: 200px;
     height: 180px;
+    cursor: pointer;
   }
   
   .volumeCardImg{
@@ -196,15 +219,17 @@
   height: 45px;
   font-size: 20px;
   font-family: sans-serif;
+  font-weight: bold;
   }
   #resultType{
     top: 471px;
     left: 690px;
-    width: 317px;
+    width: 318px;
     height: 45px;
     margin-left: 30px;
     font-size: 20px;
     font-family: sans-serif;
+    font-weight: bold;
   }
   #input{
     top: 345px;
