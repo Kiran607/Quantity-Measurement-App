@@ -15,7 +15,7 @@ class VolumeMeasurement extends React.Component {
                     <Button className="volumeButton">
                         <CardImg src={volume} alt="Card image cap" className="volumeCardImg" />
                         <CardBody>
-                            <CardText>Volume</CardText>
+                            <CardText id="volumeText">Volume</CardText>
                         </CardBody>
                     </Button>
                 </Card>

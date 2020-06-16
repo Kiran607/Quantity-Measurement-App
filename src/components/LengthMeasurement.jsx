@@ -15,7 +15,7 @@ class LengthMeasurement extends React.Component {
                     <Button className="buttonLength">
                         <CardImg src={scale} alt="Card image cap" className="lengthCard" />
                         <CardBody>
-                            <CardText>Length</CardText>
+                            <CardText id="lengthText">Length</CardText>
                         </CardBody>
                     </Button>
                 </Card>

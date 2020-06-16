@@ -15,7 +15,7 @@ class TemperatureMeasurement extends React.Component {
                     <button className="temperatureButton">
                         <CardImg src={hot} alt="Card image cap" className="hotCardImg" />
                         <CardBody>
-                            <CardText>Temperature</CardText>
+                            <CardText id="temperatureText">Temperature</CardText>
                         </CardBody>
                     </button>
                 </Card>
