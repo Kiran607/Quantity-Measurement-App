@@ -14,15 +14,17 @@ class QuantityMeasurement extends React.Component {
         inupt:"",
         result:"",
         base:"",
-        convertTo:"",
+        convertTo:""
     };
+    // this.calculate();
     }
 
   
 
-    handleSelect=(e)=>{
+    handleSelect=(event)=>{
+        console.log(event.target.value)
         this.setState({
-            [e.target.name]: e.target.value
+            [event.target.name]: event.target.value
         },
         this.calculate
         );
@@ -32,22 +34,20 @@ class QuantityMeasurement extends React.Component {
         console.log(event.target.value);
         this.setState({
             input:event.target.value,
-            result:event.target.value/1000
+            // result:event.target.value/1000
         },
         this.calculate
         );
     }
 
-    calculate=()=>{
-
-        // switch(this.state.base && this.state.convertTo){
-        //     case "Meteres" && "Kilometere":
-        //         const result=this.state.inupt /1000;
-        //         return result;
-        //     default:
-        //         alert("Not calculated");
-        // }
-        
+    calculate=()=>{   
+       if(this.state.base==="Kilometere" && this.state.convertTo==="Meteres"){
+           const result=this.state.input/1000;
+           this.setState({
+             result
+           });
+           
+       }
     }
 
     render() {
