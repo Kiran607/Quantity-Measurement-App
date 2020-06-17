@@ -9,7 +9,7 @@ class QuantityMeasurement extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            converters: ["Meteres", "Kilometere", "Centimeteres", "Millimetere", "Micrometere", "Mile", "Foot", "Inch"],
+            converters: ["Metres", "Kilometre", "Centimetres", "Milimetre", "Micrometre", "Mile", "Foot", "Inch"],
             inupt: "",
             result: "",
             base: "",
@@ -36,29 +36,57 @@ class QuantityMeasurement extends React.Component {
     }
 
     calculate = () => {
-        if (this.state.base === "Kilometere" && this.state.convertTo === "Meteres") {
+        if (this.state.base === "Kilometre" && this.state.convertTo === "Metres") {
             const result = this.state.input * 1000;
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Kilometere") {
+        if (this.state.base === "Metres" && this.state.convertTo === "Kilometre") {
             const result = this.state.input / 1000;
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Centimeteres") {
+        if (this.state.base === "Metres" && this.state.convertTo === "Centimetres") {
             const result = this.state.input / 0.01;
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Foot") {
+        if (this.state.base === "Metres" && this.state.convertTo === "Foot") {
             const result = this.state.input * 3.2808;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Metres" && this.state.convertTo === "Milimetre") {
+            const result = this.state.input * 1000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Metres" && this.state.convertTo === "Micrometre") {
+            const result = this.state.input * 1000000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Metres" && this.state.convertTo === "Mile") {
+            const result = this.state.input * 0.00062137;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Metres" && this.state.convertTo === "Inch") {
+            const result = this.state.input * 39.370;
             this.setState({
                 result
             });
