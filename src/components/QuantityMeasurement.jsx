@@ -289,6 +289,59 @@ class QuantityMeasurement extends React.Component {
                 result
             });
         }
+
+        //Mile to other measurement
+
+        if (this.state.base === "Mile" && this.state.convertTo === "Metres") {
+            const result = this.state.input / 0.00062137;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Mile" && this.state.convertTo === "Kilometre") {
+            const result = this.state.input / 0.62137;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Mile" && this.state.convertTo === "Centimetres") {
+            const result = this.state.input / 0.0000062137;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Mile" && this.state.convertTo === "Milimetre") {
+            const result = this.state.input * 1609344;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Mile" && this.state.convertTo === "Micrometre") {
+            const result = this.state.input * 1609344000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Mile" && this.state.convertTo === "Foot") {
+            const result = this.state.input * 5280;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Mile" && this.state.convertTo === "Inch") {
+            const result = this.state.input * 63360;
+            this.setState({
+                result
+            });
+        }
+
+        
     }
 
     render() {
@@ -342,7 +395,6 @@ class QuantityMeasurement extends React.Component {
                         )}
                     </select>
                 </div>
-                {/* <FromToComponent /> */}
             </div>
         );
     }
