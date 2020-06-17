@@ -4,54 +4,70 @@ import LengthMeasurement from './LengthMeasurement';
 import TemperatureMeasurement from './TemperatureMeasurement';
 import VolumeMeasurement from './VolumeMeasurement';
 import { Container, Row, Col } from 'reactstrap';
-import { switchCase } from '@babel/types';
 
 class QuantityMeasurement extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-       this.state={
-        converters:["Meteres","Kilometere","Centimeteres","Millimetere","Micrometere","Mile","Foot","Inch"],
-        inupt:"",
-        result:"",
-        base:"",
-        convertTo:""
-    };
-    // this.calculate();
+        this.state = {
+            converters: ["Meteres", "Kilometere", "Centimeteres", "Millimetere", "Micrometere", "Mile", "Foot", "Inch"],
+            inupt: "",
+            result: "",
+            base: "",
+            convertTo: ""
+        };
     }
 
-  
-
-    handleSelect=(event)=>{
+    handleSelect = (event) => {
         console.log(event.target.value)
         this.setState({
             [event.target.name]: event.target.value
         },
-        this.calculate
+            this.calculate
         );
     };
 
-    handleInput=(event)=>{
+    handleInput = (event) => {
         console.log(event.target.value);
         this.setState({
-            input:event.target.value,
-            // result:event.target.value/1000
+            input: event.target.value,
         },
-        this.calculate
+            this.calculate
         );
     }
 
-    calculate=()=>{   
-       if(this.state.base==="Kilometere" && this.state.convertTo==="Meteres"){
-           const result=this.state.input/1000;
-           this.setState({
-             result
-           });
-           
-       }
+    calculate = () => {
+        if (this.state.base === "Kilometere" && this.state.convertTo === "Meteres") {
+            const result = this.state.input * 1000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Meteres" && this.state.convertTo === "Kilometere") {
+            const result = this.state.input / 1000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Meteres" && this.state.convertTo === "Centimeteres") {
+            const result = this.state.input / 0.01;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Meteres" && this.state.convertTo === "Foot") {
+            const result = this.state.input * 3.2808;
+            this.setState({
+                result
+            });
+        }
+
     }
 
     render() {
-        const {converters,input,result,base,convertTo}=this.state;
+        const { converters, input, result, base, convertTo } = this.state;
         return (
             <div className="quantityForm">
                 <div className="header">
@@ -79,28 +95,29 @@ class QuantityMeasurement extends React.Component {
                 </Container>
                 <div className="converterBody">
                     <h4 className="converter-title">FROM TO</h4>
-                    <input value={input} 
-                        onChange={this.handleInput} 
-                        type="text" id="input"/>
-                    <span> </span>
-                    <input value={result} 
+                    <input value={input}
                         onChange={this.handleInput}
-                        type="text" id="result" 
-                        disabled={true} /><br/>
-                    <select name="base" 
+                        type="text" id="input" />
+                    <span> </span>
+                    <input value={result}
+                        onChange={this.handleInput}
+                        type="text" id="result"
+                        disabled={true} /><br />
+                    <select name="base"
                         value={base} onChange={this.handleSelect} id="inputType">
-                        {converters.map(convert=>
+                        {converters.map(convert =>
                             <option key={convert} value={convert}> {convert} </option>
-                        )}                       
+                        )}
                     </select>
                     <span> </span>
-                    <select name="convertTo" 
+                    <select name="convertTo"
                         value={convertTo} onChange={this.handleSelect} id="resultType">
-                        {converters.map(convert=>
+                        {converters.map(convert =>
                             <option key={convert} value={convert}> {convert} </option>
                         )}
                     </select>
                 </div>
+                {/* <FromToComponent /> */}
             </div>
         );
     }

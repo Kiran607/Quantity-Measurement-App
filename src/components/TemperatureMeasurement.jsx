@@ -2,7 +2,8 @@ import React from 'react';
 import {
     Card, CardImg, CardText, CardBody, Button
 } from 'reactstrap';
-import hot from '../assests/hot.png'
+import hot from '../assests/hot.png';
+import { Link } from 'react-router-dom';
 
 class TemperatureMeasurement extends React.Component {
     constructor() {
@@ -12,12 +13,14 @@ class TemperatureMeasurement extends React.Component {
         return (
             <div className="temperatureCard">
                 <Card>
-                    <button className="temperatureButton">
-                        <CardImg src={hot} alt="Card image cap" className="hotCardImg" />
-                        <CardBody>
-                            <CardText id="temperatureText">Temperature</CardText>
-                        </CardBody>
-                    </button>
+                    <Link to="/temperatureQuantity">
+                        <button className="temperatureButton">
+                            <CardImg src={hot} alt="Card image cap" className="hotCardImg" />
+                            <CardBody>
+                                <CardText id="temperatureText">Temperature</CardText>
+                            </CardBody>
+                        </button>
+                    </Link>
                 </Card>
             </div>
         );
