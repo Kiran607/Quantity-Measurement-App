@@ -36,14 +36,8 @@ class QuantityMeasurement extends React.Component {
     }
 
     calculate = () => {
-        if (this.state.base === "Kilometre" && this.state.convertTo === "Metres") {
-            const result = this.state.input * 1000;
-            this.setState({
-                result
-            });
-        }
 
-        if (this.state.base === "Metres" && this.state.convertTo === "Kilometre") {
+            if (this.state.base === "Metres" && this.state.convertTo === "Kilometre") {
             const result = this.state.input / 1000;
             this.setState({
                 result
@@ -87,6 +81,66 @@ class QuantityMeasurement extends React.Component {
 
         if (this.state.base === "Metres" && this.state.convertTo === "Inch") {
             const result = this.state.input * 39.370;
+            this.setState({
+                result
+            });
+        }
+
+        //Kilometre to other components
+
+        if (this.state.base === "Kilometre" && this.state.convertTo === "Metres") {
+            const result = this.state.input * 1000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Kilometre" && this.state.convertTo === "Centimetres") {
+            const result = this.state.input * 100000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Kilometre" && this.state.convertTo === "Milimetre") {
+            const result = this.state.input * 1000000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Kilometre" && this.state.convertTo === "Micrometre") {
+            const result = this.state.input * 1000000000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Kilometre" && this.state.convertTo === "Mile") {
+            const result = this.state.input * 0.62137;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Kilometre" && this.state.convertTo === "Foot") {
+            const result = this.state.input * 3280.8;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Kilometre" && this.state.convertTo === "Inch") {
+            const result = this.state.input * 39370;
+            this.setState({
+                result
+            });
+        }
+
+        //Centimetre to other measurement
+
+        if (this.state.base === "Centimetres" && this.state.convertTo === "Metres") {
+            const result = this.state.input / 100;
             this.setState({
                 result
             });
