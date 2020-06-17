@@ -188,7 +188,107 @@ class QuantityMeasurement extends React.Component {
             });
         }
 
+        //MilliMetres to other measurement
 
+        if (this.state.base === "Milimetre" && this.state.convertTo === "Metres") {
+            const result = this.state.input / 1000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Milimetre" && this.state.convertTo === "Kilometre") {
+            const result = this.state.input / 1000000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Milimetre" && this.state.convertTo === "Centimetres") {
+            const result = this.state.input / 10;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Milimetre" && this.state.convertTo === "Micrometre") {
+            const result = this.state.input * 1000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Milimetre" && this.state.convertTo === "Mile") {
+            const result = this.state.input * 6.2137119223733E-7;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Milimetre" && this.state.convertTo === "Foot") {
+            const result = this.state.input / 305;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Milimetre" && this.state.convertTo === "Inch") {
+            const result = this.state.input / 25.4;
+            this.setState({
+                result
+            });
+        }
+
+        //Micrometre to other measurements
+
+        if (this.state.base === "Micrometre" && this.state.convertTo === "Metres") {
+            const result = this.state.input / 1000000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Micrometre" && this.state.convertTo === "Kilometre") {
+            const result = this.state.input / 1000000000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Micrometre" && this.state.convertTo === "Centimetres") {
+            const result = this.state.input / 10000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Micrometre" && this.state.convertTo === "Milimetre") {
+            const result = this.state.input / 1000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Micrometre" && this.state.convertTo === "Mile") {
+            const result = this.state.input / 1609344000;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Micrometre" && this.state.convertTo === "Foot") {
+            const result = this.state.input / 304800;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Micrometre" && this.state.convertTo === "Inch") {
+            const result = this.state.input / 25400;
+            this.setState({
+                result
+            });
+        }
     }
 
     render() {
