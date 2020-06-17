@@ -341,7 +341,60 @@ class QuantityMeasurement extends React.Component {
             });
         }
 
-        
+        //Foot to other measurement
+
+        if (this.state.base === "Foot" && this.state.convertTo === "Metres") {
+            const result = this.state.input / 3.2808;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Foot" && this.state.convertTo === "Kilometre") {
+            const result = this.state.input / 3280.8;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Foot" && this.state.convertTo === "Centimetres") {
+            const result = this.state.input / 0.032808;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Foot" && this.state.convertTo === "Milimetre") {
+            const result = this.state.input * 305;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Foot" && this.state.convertTo === "Micrometre") {
+            const result = this.state.input * 304800;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Foot" && this.state.convertTo === "Mile") {
+            const result = this.state.input * 0.00018939;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Foot" && this.state.convertTo === "Inch") {
+            const result = this.state.input * 12;
+            this.setState({
+                result
+            });
+        }
+
+
+
+
     }
 
     render() {
