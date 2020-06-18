@@ -1,3 +1,7 @@
+body{
+  background: #EEE;
+}
+
 .App {
   text-align: center;
 }
@@ -96,11 +100,10 @@
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 7px;
   opacity: 1;
-  cursor: pointer;
   }
 
   .buttonLength:hover{
-    background-color: #EDFDF9;
+    background-color: rgb(128, 204, 166,0.5);;
     border: 1px solid #0EC098;
     color: #0EC098;
   }
@@ -111,7 +114,9 @@
   width: 200px;
   height: 180px;
   cursor: pointer;
-  
+  border-radius: 7px;
+  background-color: white;
+  border: none;
   }
 
   p{
@@ -154,6 +159,9 @@
     width: 200px;
     height: 180px;
     cursor: pointer;
+    border-radius: 7px;
+    background-color: white;
+    border: none;
   }
 
   .hotCardImg{
@@ -175,7 +183,6 @@
   border-radius: 7px;
   opacity: 1;
   margin-left: 30px;
-  cursor: pointer;
   }
 
   .volumeButton:hover{
@@ -190,6 +197,9 @@
     width: 200px;
     height: 180px;
     cursor: pointer;
+    border-radius: 7px;
+    background-color: white;
+    border: none;
   }
   
   .volumeCardImg{
@@ -220,6 +230,69 @@
   font-family: sans-serif;
   font-weight: bold;
   }
+
+  #inputTypeVolume:hover{
+    color: rgb(81, 7, 219);
+    cursor: pointer;
+  }
+
+  #inputTypeVolume{
+  top: 471px;
+  left: 385px;
+  width: 317px;
+  height: 45px;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  }
+
+  #resultTypeVolume{
+    top: 471px;
+    left: 690px;
+    width: 318px;
+    height: 45px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  #resultTypeVolume:hover{
+    color: rgb(81, 7, 219);
+    cursor: pointer;
+  }
+
+  #inputTypeTemperature{
+  top: 471px;
+  left: 385px;
+  width: 317px;
+  height: 45px;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  }
+
+  #inputTypeTemperature:hover{
+    color: #FD5160;
+    cursor: pointer;
+  }
+
+  #resultTypeTemperature:hover{
+    color: #FD5160;
+    cursor: pointer;
+  }
+
+  #resultTypeTemperature{
+    top: 471px;
+    left: 690px;
+    width: 318px;
+    height: 45px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
   #resultType{
     top: 471px;
     left: 690px;
@@ -230,6 +303,17 @@
     font-family: sans-serif;
     font-weight: bold;
   }
+
+  #resultType:hover{
+    color: #0EC098;
+    cursor: pointer;
+  }
+
+  #inputType:hover{
+    color: #0EC098;
+    cursor: pointer;
+  }
+
   #input{
     top: 345px;
     left: 385px;
