@@ -8,6 +8,7 @@ function App() {
   return (
     <Router>
       <Switch>
+      <Route path="/" exact component={QuantityMeasurement} />
       <Route path="/lengthQuantity" exact component={QuantityMeasurement} />
       <Route path="/volumeQuantity" exact component={VolumeQuantity}/>
       <Route path="/temperatureQuantity" exact component={TemperatureQuantity} />
