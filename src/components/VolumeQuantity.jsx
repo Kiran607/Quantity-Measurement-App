@@ -4,6 +4,10 @@ import LengthMeasurement from './LengthMeasurement';
 import TemperatureMeasurement from './TemperatureMeasurement';
 import VolumeMeasurement from './VolumeMeasurement';
 import { Container, Row, Col } from 'reactstrap';
+import quantity from '../assests/Measurement.json';
+import {
+    Card, CardImg, CardText, CardBody, Button
+} from 'reactstrap';
 
 class VolumeQuantity extends React.Component {
     constructor(props) {
@@ -13,7 +17,22 @@ class VolumeQuantity extends React.Component {
             inupt: "",
             result: "",
             base: "",
-            convertTo: ""
+            convertTo: "",
+
+            quantity:[
+                {
+                    image:"../assests/Measurement.json",
+                    type:"Length"
+                },
+                {
+                    image:"../assests/Measurement.json",
+                    type:"Volume"
+                },
+                {
+                    image:"../assests/Measurement.json",
+                    type:"Temperature"
+                }
+            ]
         };
     }
 
@@ -36,29 +55,43 @@ class VolumeQuantity extends React.Component {
     }
 
     calculate = () => {
-        if (this.state.base === "Kilometere" && this.state.convertTo === "Meteres") {
-            const result = this.state.input * 1000;
+        if (this.state.base === "Litres" && this.state.convertTo === "Millilitres") {
+            const result = (this.state.input) * 1000;
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Kilometere") {
-            const result = this.state.input / 1000;
+        if (this.state.base === "Litres" && this.state.convertTo === "Gallons") {
+            const result = Math.round((this.state.input) / 3.785).toFixed(3);
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Centimeteres") {
-            const result = this.state.input / 0.01;
+        if (this.state.base === "Millilitres" && this.state.convertTo === "Litres") {
+            const result = (this.state.input) / 1000;
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Foot") {
-            const result = this.state.input * 3.2808;
+        if (this.state.base === "Millilitres" && this.state.convertTo === "Gallons") {
+            const result = (this.state.input) / 3785;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Gallons" && this.state.convertTo === "Litres") {
+            const result = (this.state.input) * 3.785;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Gallons" && this.state.convertTo === "Millilitres") {
+            const result = (this.state.input) * 3785;
             this.setState({
                 result
             });
@@ -67,7 +100,7 @@ class VolumeQuantity extends React.Component {
     }
 
     render() {
-        const { converters, input, result, base, convertTo } = this.state;
+        const { converters, input, result, base, convertTo } = this.state; 
         return (
             <div className="quantityForm">
                 <div className="header">
