@@ -37,42 +37,42 @@ class TemperatureQuantity extends React.Component {
 
     calculate = () => {
         if (this.state.base === "Celsius" && this.state.convertTo === "Fahrenheit") {
-            const result = (this.state.input * 9 / 5) + 32;
+            const result = ((this.state.input * 9 / 5) + 32).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Celsius" && this.state.convertTo === "Kelvin") {
-            const result = parseFloat(this.state.input) + 273.15;
+            const result = (parseFloat(this.state.input) + 273.15).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Fahrenheit" && this.state.convertTo === "Celsius") {
-            const result = parseFloat(this.state.input - 32) * 5 / 9;
+            const result = (parseFloat(this.state.input - 32) * 5 / 9).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Fahrenheit" && this.state.convertTo === "Kelvin") {
-            const result = parseFloat(this.state.input - 32) * 5 / 9 + 273.15;
+            const result = (parseFloat(this.state.input - 32) * 5 / 9 + 273.15).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Kelvin" && this.state.convertTo === "Celsius") {
-            const result = parseFloat(this.state.input) - 273.15;
+            const result = (parseFloat(this.state.input) - 273.15).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Kelvin" && this.state.convertTo === "Fahrenheit") {
-            const result = Math.round(parseFloat(this.state.input - 273.15) * 9 / 5 + 32).toFixed(2);
+            const result = (parseFloat(this.state.input - 273.15) * 9 / 5 + 32).toFixed(2);
             this.setState({
                 result
             });
@@ -117,14 +117,14 @@ class TemperatureQuantity extends React.Component {
                         type="text" id="result"
                         disabled={true} /><br />
                     <select name="base"
-                        value={base} onChange={this.handleSelect} id="inputType">
+                        value={base} onChange={this.handleSelect} id="inputTypeTemperature">
                         {converters.map(convert =>
                             <option key={convert} value={convert}> {convert} </option>
                         )}
                     </select>
                     <span> </span>
                     <select name="convertTo"
-                        value={convertTo} onChange={this.handleSelect} id="resultType">
+                        value={convertTo} onChange={this.handleSelect} id="resultTypeTemperature">
                         {converters.map(convert =>
                             <option key={convert} value={convert}> {convert} </option>
                         )}
