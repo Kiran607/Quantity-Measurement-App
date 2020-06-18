@@ -8,6 +8,7 @@ import quantity from '../assests/Measurement.json';
 import {
     Card, CardImg, CardText, CardBody, Button
 } from 'reactstrap';
+import calculate from './CalculateQuantity';
 
 class VolumeQuantity extends React.Component {
     constructor(props) {
@@ -21,15 +22,15 @@ class VolumeQuantity extends React.Component {
 
             quantity:[
                 {
-                    image:"../assests/Measurement.json",
+                    unitImage:"../assests/Measurement.json",
                     type:"Length"
                 },
                 {
-                    image:"../assests/Measurement.json",
+                    unitImage:"../assests/Measurement.json",
                     type:"Volume"
                 },
                 {
-                    image:"../assests/Measurement.json",
+                    unitImage:"../assests/Measurement.json",
                     type:"Temperature"
                 }
             ]
@@ -42,6 +43,7 @@ class VolumeQuantity extends React.Component {
             [event.target.name]: event.target.value
         },
             this.calculate
+            // <calculate/>
         );
     };
 
@@ -51,47 +53,48 @@ class VolumeQuantity extends React.Component {
             input: event.target.value,
         },
             this.calculate
+            // <calculate/>
         );
     }
 
     calculate = () => {
         if (this.state.base === "Litres" && this.state.convertTo === "Millilitres") {
-            const result = (this.state.input) * 1000;
+            const result = ((this.state.input) * 1000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Litres" && this.state.convertTo === "Gallons") {
-            const result = Math.round((this.state.input) / 3.785).toFixed(3);
+            const result = ((this.state.input) / 3.785).toFixed(3);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Millilitres" && this.state.convertTo === "Litres") {
-            const result = (this.state.input) / 1000;
+            const result = ((this.state.input) / 1000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Millilitres" && this.state.convertTo === "Gallons") {
-            const result = (this.state.input) / 3785;
+            const result = ((this.state.input) / 3785).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Gallons" && this.state.convertTo === "Litres") {
-            const result = (this.state.input) * 3.785;
+            const result = ((this.state.input) * 3.785).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Gallons" && this.state.convertTo === "Millilitres") {
-            const result = (this.state.input) * 3785;
+            const result = ((this.state.input) * 3785).toFixed(3);
             this.setState({
                 result
             });
@@ -130,21 +133,21 @@ class VolumeQuantity extends React.Component {
                     <h4 className="converter-title">FROM TO</h4>
                     <input value={input}
                         onChange={this.handleInput}
-                        type="text" id="input" />
+                        type="" id="input" />
                     <span> </span>
                     <input value={result}
                         onChange={this.handleInput}
-                        type="text" id="result"
+                        type="" id="result"
                         disabled={true} /><br />
                     <select name="base"
-                        value={base} onChange={this.handleSelect} id="inputType">
+                        value={base} onChange={this.handleSelect} id="inputTypeVolume">
                         {converters.map(convert =>
                             <option key={convert} value={convert}> {convert} </option>
                         )}
                     </select>
                     <span> </span>
                     <select name="convertTo"
-                        value={convertTo} onChange={this.handleSelect} id="resultType">
+                        value={convertTo} onChange={this.handleSelect} id="resultTypeVolume">
                         {converters.map(convert =>
                             <option key={convert} value={convert}> {convert} </option>
                         )}
