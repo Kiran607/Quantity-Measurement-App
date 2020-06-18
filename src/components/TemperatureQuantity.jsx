@@ -36,34 +36,47 @@ class TemperatureQuantity extends React.Component {
     }
 
     calculate = () => {
-        if (this.state.base === "Kilometere" && this.state.convertTo === "Meteres") {
-            const result = this.state.input * 1000;
+        if (this.state.base === "Celsius" && this.state.convertTo === "Fahrenheit") {
+            const result = (this.state.input * 9 / 5) + 32;
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Kilometere") {
-            const result = this.state.input / 1000;
+        if (this.state.base === "Celsius" && this.state.convertTo === "Kelvin") {
+            const result = parseFloat(this.state.input) + 273.15;
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Centimeteres") {
-            const result = this.state.input / 0.01;
+        if (this.state.base === "Fahrenheit" && this.state.convertTo === "Celsius") {
+            const result = parseFloat(this.state.input - 32) * 5 / 9;
             this.setState({
                 result
             });
         }
 
-        if (this.state.base === "Meteres" && this.state.convertTo === "Foot") {
-            const result = this.state.input * 3.2808;
+        if (this.state.base === "Fahrenheit" && this.state.convertTo === "Kelvin") {
+            const result = parseFloat(this.state.input - 32) * 5 / 9 + 273.15;
             this.setState({
                 result
             });
         }
 
+        if (this.state.base === "Kelvin" && this.state.convertTo === "Celsius") {
+            const result = parseFloat(this.state.input) - 273.15;
+            this.setState({
+                result
+            });
+        }
+
+        if (this.state.base === "Kelvin" && this.state.convertTo === "Fahrenheit") {
+            const result = Math.round(parseFloat(this.state.input - 273.15) * 9 / 5 + 32).toFixed(2);
+            this.setState({
+                result
+            });
+        }
     }
 
     render() {
