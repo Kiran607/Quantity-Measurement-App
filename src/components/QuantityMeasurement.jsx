@@ -10,10 +10,10 @@ class QuantityMeasurement extends React.Component {
         super(props);
         this.state = {
             converters: ["Metres", "Kilometre", "Centimetres", "Milimetre", "Micrometre", "Mile", "Foot", "Inch"],
-            inupt: "",
-            result: "",
-            base: "",
-            convertTo: ""
+            inupt: '',
+            result: '',
+            base: '',
+            convertTo: ''
         };
     }
 
@@ -38,49 +38,49 @@ class QuantityMeasurement extends React.Component {
     calculate = () => {
 
             if (this.state.base === "Metres" && this.state.convertTo === "Kilometre") {
-            const result = this.state.input / 1000;
+            const result = (this.state.input / 1000).toFixed(2);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Metres" && this.state.convertTo === "Centimetres") {
-            const result = this.state.input / 0.01;
+            const result = (this.state.input / 0.01).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Metres" && this.state.convertTo === "Foot") {
-            const result = this.state.input * 3.2808;
+            const result = (this.state.input * 3.2808).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Metres" && this.state.convertTo === "Milimetre") {
-            const result = this.state.input * 1000;
+            const result = (this.state.input * 1000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Metres" && this.state.convertTo === "Micrometre") {
-            const result = this.state.input * 1000000;
+            const result = (this.state.input * 1000000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Metres" && this.state.convertTo === "Mile") {
-            const result = this.state.input * 0.00062137;
+            const result = (this.state.input * 0.00062137).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Metres" && this.state.convertTo === "Inch") {
-            const result = this.state.input * 39.370;
+            const result = (this.state.input * 39.370).toFixed(4);
             this.setState({
                 result
             });
@@ -89,49 +89,49 @@ class QuantityMeasurement extends React.Component {
         //Kilometre to other components
 
         if (this.state.base === "Kilometre" && this.state.convertTo === "Metres") {
-            const result = this.state.input * 1000;
+            const result = (this.state.input * 1000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Kilometre" && this.state.convertTo === "Centimetres") {
-            const result = this.state.input * 100000;
+            const result = (this.state.input * 100000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Kilometre" && this.state.convertTo === "Milimetre") {
-            const result = this.state.input * 1000000;
+            const result = (this.state.input * 1000000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Kilometre" && this.state.convertTo === "Micrometre") {
-            const result = this.state.input * 1000000000;
+            const result = (this.state.input * 1000000000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Kilometre" && this.state.convertTo === "Mile") {
-            const result = this.state.input * 0.62137;
+            const result = (this.state.input * 0.62137).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Kilometre" && this.state.convertTo === "Foot") {
-            const result = this.state.input * 3280.8;
+            const result = (this.state.input * 3280.8).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Kilometre" && this.state.convertTo === "Inch") {
-            const result = this.state.input * 39370;
+            const result = (this.state.input * 39370);
             this.setState({
                 result
             });
@@ -140,49 +140,49 @@ class QuantityMeasurement extends React.Component {
         //Centimetre to other measurement
 
         if (this.state.base === "Centimetres" && this.state.convertTo === "Metres") {
-            const result = this.state.input / 100;
+            const result = (this.state.input / 100).toFixed(2);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Centimetres" && this.state.convertTo === "Kilometre") {
-            const result = this.state.input / 100000;
+            const result = (this.state.input / 100000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Centimetres" && this.state.convertTo === "Milimetre") {
-            const result = this.state.input * 10;
+            const result = (this.state.input * 10);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Centimetres" && this.state.convertTo === "Micrometre") {
-            const result = this.state.input * 10000;
+            const result = (this.state.input * 10000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Centimetres" && this.state.convertTo === "Mile") {
-            const result = this.state.input * 0.0000062137;
+            const result = (this.state.input * 0.0000062137).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Centimetres" && this.state.convertTo === "Foot") {
-            const result = this.state.input * 0.032808;
+            const result = (this.state.input * 0.032808).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Centimetres" && this.state.convertTo === "Inch") {
-            const result = this.state.input * 0.39370;
+            const result = (this.state.input * 0.39370).toFixed(4);
             this.setState({
                 result
             });
@@ -191,49 +191,49 @@ class QuantityMeasurement extends React.Component {
         //MilliMetres to other measurement
 
         if (this.state.base === "Milimetre" && this.state.convertTo === "Metres") {
-            const result = this.state.input / 1000;
+            const result = (this.state.input / 1000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Milimetre" && this.state.convertTo === "Kilometre") {
-            const result = this.state.input / 1000000;
+            const result = (this.state.input / 1000000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Milimetre" && this.state.convertTo === "Centimetres") {
-            const result = this.state.input / 10;
+            const result = (this.state.input / 10).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Milimetre" && this.state.convertTo === "Micrometre") {
-            const result = this.state.input * 1000;
+            const result = (this.state.input * 1000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Milimetre" && this.state.convertTo === "Mile") {
-            const result = this.state.input * 6.2137119223733E-7;
+            const result = (this.state.input * 6.2137119223733E-7).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Milimetre" && this.state.convertTo === "Foot") {
-            const result = this.state.input / 305;
+            const result = (this.state.input / 305).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Milimetre" && this.state.convertTo === "Inch") {
-            const result = this.state.input / 25.4;
+            const result = (this.state.input / 25.4).toFixed(4);
             this.setState({
                 result
             });
@@ -242,49 +242,49 @@ class QuantityMeasurement extends React.Component {
         //Micrometre to other measurements
 
         if (this.state.base === "Micrometre" && this.state.convertTo === "Metres") {
-            const result = this.state.input / 1000000;
+            const result = (this.state.input / 1000000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Micrometre" && this.state.convertTo === "Kilometre") {
-            const result = this.state.input / 1000000000;
+            const result = (this.state.input / 1000000000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Micrometre" && this.state.convertTo === "Centimetres") {
-            const result = this.state.input / 10000;
+            const result = (this.state.input / 10000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Micrometre" && this.state.convertTo === "Milimetre") {
-            const result = this.state.input / 1000;
+            const result = (this.state.input / 1000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Micrometre" && this.state.convertTo === "Mile") {
-            const result = this.state.input / 1609344000;
+            const result = (this.state.input / 1609344000).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Micrometre" && this.state.convertTo === "Foot") {
-            const result = this.state.input / 304800;
+            const result = (this.state.input / 304800).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Micrometre" && this.state.convertTo === "Inch") {
-            const result = this.state.input / 25400;
+            const result = (this.state.input / 25400).toFixed(4);
             this.setState({
                 result
             });
@@ -293,49 +293,49 @@ class QuantityMeasurement extends React.Component {
         //Mile to other measurement
 
         if (this.state.base === "Mile" && this.state.convertTo === "Metres") {
-            const result = this.state.input / 0.00062137;
+            const result = (this.state.input / 0.00062137).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Mile" && this.state.convertTo === "Kilometre") {
-            const result = this.state.input / 0.62137;
+            const result = (this.state.input / 0.62137).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Mile" && this.state.convertTo === "Centimetres") {
-            const result = this.state.input / 0.0000062137;
+            const result = (this.state.input / 0.0000062137).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Mile" && this.state.convertTo === "Milimetre") {
-            const result = this.state.input * 1609344;
+            const result = (this.state.input * 1609344);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Mile" && this.state.convertTo === "Micrometre") {
-            const result = this.state.input * 1609344000;
+            const result = (this.state.input * 1609344000);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Mile" && this.state.convertTo === "Foot") {
-            const result = this.state.input * 5280;
+            const result = (this.state.input * 5280);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Mile" && this.state.convertTo === "Inch") {
-            const result = this.state.input * 63360;
+            const result = (this.state.input * 63360);
             this.setState({
                 result
             });
@@ -344,49 +344,49 @@ class QuantityMeasurement extends React.Component {
         //Foot to other measurement
 
         if (this.state.base === "Foot" && this.state.convertTo === "Metres") {
-            const result = this.state.input / 3.2808;
+            const result = (this.state.input / 3.2808).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Foot" && this.state.convertTo === "Kilometre") {
-            const result = this.state.input / 3280.8;
+            const result = (this.state.input / 3280.8).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Foot" && this.state.convertTo === "Centimetres") {
-            const result = this.state.input / 0.032808;
+            const result = (this.state.input / 0.032808).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Foot" && this.state.convertTo === "Milimetre") {
-            const result = this.state.input * 305;
+            const result = (this.state.input * 305);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Foot" && this.state.convertTo === "Micrometre") {
-            const result = this.state.input * 304800;
+            const result = (this.state.input * 304800);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Foot" && this.state.convertTo === "Mile") {
-            const result = this.state.input * 0.00018939;
+            const result = (this.state.input * 0.00018939).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Foot" && this.state.convertTo === "Inch") {
-            const result = this.state.input * 12;
+            const result = (this.state.input * 12);
             this.setState({
                 result
             });
@@ -394,49 +394,49 @@ class QuantityMeasurement extends React.Component {
 
         //Inch to other measurements
         if (this.state.base === "Inch" && this.state.convertTo === "Metres") {
-            const result = this.state.input / 39.370;
+            const result = (this.state.input / 39.370).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Inch" && this.state.convertTo === "Kilometre") {
-            const result = this.state.input / 39370;
+            const result = (this.state.input / 39370).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Inch" && this.state.convertTo === "Centimetres") {
-            const result = this.state.input / 0.39370;
+            const result = (this.state.input / 0.39370).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Inch" && this.state.convertTo === "Milimetre") {
-            const result = this.state.input * 25.4;
+            const result = (this.state.input * 25.4).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Inch" && this.state.convertTo === "Micrometre") {
-            const result = this.state.input * 25400;
+            const result = (this.state.input * 25400);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Inch" && this.state.convertTo === "Mile") {
-            const result = this.state.input / 63360;
+            const result = (this.state.input / 63360).toFixed(4);
             this.setState({
                 result
             });
         }
 
         if (this.state.base === "Inch" && this.state.convertTo === "Foot") {
-            const result = this.state.input / 12;
+            const result = (this.state.input / 12).toFixed(3);
             this.setState({
                 result
             });
@@ -476,21 +476,25 @@ class QuantityMeasurement extends React.Component {
                     <h4 className="converter-title">FROM TO</h4>
                     <input value={input}
                         onChange={this.handleInput}
-                        type="text" id="input" />
+                        type="number" id="input" />
                     <span> </span>
                     <input value={result}
                         onChange={this.handleInput}
-                        type="text" id="result"
+                        type="" id="result"
                         disabled={true} /><br />
                     <select name="base"
-                        value={base} onChange={this.handleSelect} id="inputType">
+                        value={base} 
+                        onChange={this.handleSelect} 
+                        id="inputType">
                         {converters.map(convert =>
                             <option key={convert} value={convert}> {convert} </option>
                         )}
                     </select>
                     <span> </span>
                     <select name="convertTo"
-                        value={convertTo} onChange={this.handleSelect} id="resultType">
+                        value={convertTo} 
+                        onChange={this.handleSelect} 
+                        id="resultType">
                         {converters.map(convert =>
                             <option key={convert} value={convert}> {convert} </option>
                         )}
